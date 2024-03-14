@@ -1,29 +1,26 @@
 ---
-title: FastAPI
-description: A FastAPI server
-tags:
-  - fastapi
-  - hypercorn
-  - python
+title: TECHNICAL TEST ISMAYA LEGIT GROUP
+description: By. Danang Stiawan
 ---
 
-# FastAPI Example
+# Dummy User Login
 
-This example starts up a [FastAPI](https://fastapi.tiangolo.com/) server.
-
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/-NvLj4?referralCode=CRJ8FE)
-## ✨ Features
-
-- FastAPI
-- [Hypercorn](https://hypercorn.readthedocs.io/)
-- Python 3
+"username": "ismayalegit",
+"password": "password2024"
 
 ## 💁‍♀️ How to use
 
-- Clone locally and install packages with pip using `pip install -r requirements.txt`
-- Run locally using `hypercorn main:app --reload`
+Create New Password
+Run : generate_new_pass.py
 
-## 📝 Notes
+Login (get token)
+Endpoint API : /login
+Body (json):
+{
+"username": "ismayalegit",
+"password": "password2024"
+}
 
-- To learn about how to use FastAPI with most of its features, you can visit the [FastAPI Documentation](https://fastapi.tiangolo.com/tutorial/)
-- To learn about Hypercorn and how to configure it, read their [Documentation](https://hypercorn.readthedocs.io/)
+Get Weather
+Endpoint API : /weather/{city} Example: /weather/Jakarta
+Header: Key: Authorization , Value : Bearer token (Example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJpc21heWFsZWdpdCIsInVzZXJuYW1lIjoiaXNtYXlhbGVnaXQiLCJlbWFpbCI6ImV4YW1wbGVAbWFpbC5jb20iLCJ0aW1lc3RhbXAiOjE3MTAzMTY1OTEuNzUxOTA5fQ.q0Ih5GjxaG9yTxVREcRlxSL8mTW9onN9xOShuwsH3f0)
