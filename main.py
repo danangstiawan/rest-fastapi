@@ -6,7 +6,7 @@
 # async def root():
 #     return {"greeting": "Hello, World!", "message": "Welcome to FastAPI!"}
 
-import requests
+from requests import requests
 from fastapi import FastAPI, HTTPException, Depends, Header, status
 from pydantic import BaseModel
 from jose import jwt, JWTError
