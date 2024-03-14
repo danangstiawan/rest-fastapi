@@ -6,7 +6,7 @@
 # async def root():
 #     return {"greeting": "Hello, World!", "message": "Welcome to FastAPI!"}
 
-from requests import requests
+from requests import request
 from fastapi import FastAPI, HTTPException, Depends, Header, status
 from pydantic import BaseModel
 from jose import jwt, JWTError
@@ -124,7 +124,7 @@ async def login_for_access_token(form_data: User):
 @app.get("/weather/{city}", response_model=Weather)
 async def get_weather(city: str, current_user: str = Depends(get_current_user)):
     url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&APPID={API_KEY}"
-    response = requests.get(url)
+    response = request.get(url)
     if response.status_code != 200:
         raise HTTPException(status_code=response.status_code, detail="City not found")
     data = response.json()
